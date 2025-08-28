@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="uk">
   <head>
-    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png" />
     <link rel="manifest" href="site.webmanifest" />
 
     <meta charset="utf-8" />
@@ -16,25 +16,20 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
     <style>
       .card:hover {
-        background-color: rgba(0, 0, 0, 0.132); /* зелений з прозорістю 50% */
+        background-color: rgba(0, 0, 0, 0.132);
       }
-    </style>
-    <style>
       .photo-enhance {
         filter: brightness(120%) contrast(110%);
         border-radius: 10px;
       }
       .section {
         display: none;
-      } /* всі секції спочатку приховані */
-    </style>
-    <style>
+      }
       body {
-        background-color: #f0f0f0; /* світло-сірий фон для сайту */
-        margin: 0; /* прибирає стандартні відступи браузера */
+        background-color: #f0f0f0;
+        margin: 0;
         font-family: "Arial", sans-serif;
       }
-
       .bold-title {
         font-weight: 700;
         color: #1a1a1a;
@@ -45,41 +40,29 @@
   <body>
     <!-- Музика на фоні -->
     <audio id="bgmusic" loop>
-      <source src="музика.mp3" type="audio/mpeg" />
+      <source src="video/музика.mp3" type="audio/mpeg" />
     </audio>
     <audio id="bgmusic2">
-      <source src="aufnahme.ogg" type="audio/ogg" />
+      <source src="video/aufnahme.ogg" type="audio/ogg" />
     </audio>
 
     <!-- Секція: З днем народження -->
     <div id="birthday" class="section" style="display: block">
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
-          <a class="navbar-brand p-0" href="#"
-            ><img src="M.png" alt="Logo" width="40"
-          /></a>
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNav1"
-          >
+          <a class="navbar-brand p-0" href="#">
+            <img src="img/M.png" alt="Logo" width="40" />
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav1">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarNav1">
             <ul class="navbar-nav">
               <li class="nav-item">
-                <a
-                  class="nav-link active"
-                  href="#"
-                  onclick="showSection('birthday')"
-                  >З днем народження!</a
-                >
+                <a class="nav-link active" href="#" onclick="showSection('birthday')">З днем народження!</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#" onclick="showSection('wishes')"
-                  >Побажання</a
-                >
+                <a class="nav-link" href="#" onclick="showSection('wishes')">Побажання</a>
               </li>
             </ul>
           </div>
@@ -89,25 +72,14 @@
       <div class="container text-center my-5">
         <div class="row">
           <div class="col-lg-6 col-md-8 mx-auto">
-            <img
-              class="photo-enhance"
-              src="kaka.jpg"
-              alt="brother"
-              width="300"
-              class="d-block mx-auto mb-5"
-            />
+            <img class="photo-enhance" src="img/kaka.jpg" alt="brother" width="300" class="d-block mx-auto mb-5" />
             <h1 class="fw-light">Мішику,</h1>
             <p class="lead text-muted">
               Вітаю тебе з днем народження! Ти мій найкращий!
             </p>
 
-            <button class="btn btn-primary" onclick="playMusic2()">
-              Привітання від мене
-            </button>
-
-            <button class="btn btn-secondary" onclick="playMusic()">
-              Увімкнути музику
-            </button>
+            <button class="btn btn-primary" onclick="playMusic2()">Привітання від мене</button>
+            <button class="btn btn-secondary" onclick="playMusic()">Увімкнути музику</button>
           </div>
         </div>
       </div>
@@ -117,31 +89,19 @@
     <div id="wishes" class="section">
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
-          <a class="navbar-brand p-0" href="#"
-            ><img src="M.png" alt="Logo" width="40"
-          /></a>
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNav2"
-          >
+          <a class="navbar-brand p-0" href="#">
+            <img src="img/M.png" alt="Logo" width="40" />
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav2">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarNav2">
             <ul class="navbar-nav">
               <li class="nav-item">
-                <a class="nav-link" href="#" onclick="showSection('birthday')"
-                  >З днем народження!</a
-                >
+                <a class="nav-link" href="#" onclick="showSection('birthday')">З днем народження!</a>
               </li>
               <li class="nav-item">
-                <a
-                  class="nav-link active"
-                  href="#"
-                  onclick="showSection('wishes')"
-                  >Побажання</a
-                >
+                <a class="nav-link active" href="#" onclick="showSection('wishes')">Побажання</a>
               </li>
             </ul>
           </div>
@@ -149,34 +109,16 @@
       </nav>
 
       <div class="container text-center my-5">
-        <h1 class="bold-title">
-          З днем народження, мій чотирьох-рукий братику!
-        </h1>
-
-        <style>
-          .bold-title {
-            font-family: "Arial", sans-serif; /* гарний шрифт */
-            font-weight: 700; /* робить текст жирним */
-            color: #1a1a1a; /* темний, насичений колір */
-            text-align: center; /* по центру */
-          }
-        </style>
-
+        <h1 class="bold-title">З днем народження, мій чотирьох-рукий братику!</h1>
         <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-5">
           <!-- Картка 1 -->
           <div class="col">
             <div class="card">
-              <img
-                src="ernsthaft.jpg"
-                class="card-img-top"
-                alt="Я тебе люблю!"
-                style="width: 300px; height: auto"
-              />
+              <img src="img/ernsthaft.jpg" class="card-img-top" alt="Я тебе люблю!" style="width: 300px; height: auto" />
               <div class="card-body">
                 <h5 class="card-title">Каюся</h5>
                 <p class="card-text">
-                  Мішику, пробач мене за всі мої пригрішенія, не сердись на
-                  мене, я ся справлю!
+                  Мішику, пробач мене за всі мої пригрішенія, не сердись на мене, я ся справлю!
                 </p>
               </div>
             </div>
@@ -184,17 +126,11 @@
           <!-- Картка 2 -->
           <div class="col">
             <div class="card">
-              <img
-                src="liebe.jpg"
-                class="card-img-top"
-                alt="Я тебе люблю!"
-                style="width: 300px; height: auto"
-              />
+              <img src="img/liebe.jpg" class="card-img-top" alt="Я тебе люблю!" style="width: 300px; height: auto" />
               <div class="card-body">
                 <h5 class="card-title">Люблю</h5>
                 <p class="card-text">
-                  Мішику, Я тебе дуже сильно люблю і вже скучаю за тобою, тому
-                  чекаю нашої зустрічі!
+                  Мішику, Я тебе дуже сильно люблю і вже скучаю за тобою, тому чекаю нашої зустрічі!
                 </p>
               </div>
             </div>
@@ -202,17 +138,11 @@
           <!-- Картка 3 -->
           <div class="col">
             <div class="card">
-              <img
-                src="stark.jpg"
-                class="card-img-top"
-                alt="Я тебе люблю!"
-                style="width: 1024; height: 1300"
-              />
+              <img src="img/stark.jpg" class="card-img-top" alt="Я тебе люблю!" style="width: 1024px; height: 1300px" />
               <div class="card-body">
                 <h5 class="card-title">Бажаю</h5>
                 <p class="card-text">
-                  Я бажаю тобі здійснити всі твої цілі включаючи: спортивну
-                  форму яку ти хочеш, закінчуючи професіоналом у своїй справі
+                  Я бажаю тобі здійснити всі твої цілі включаючи: спортивну форму яку ти хочеш, закінчуючи професіоналом у своїй справі
                 </p>
               </div>
             </div>
@@ -223,9 +153,7 @@
 
     <script>
       function showSection(id) {
-        document
-          .querySelectorAll(".section")
-          .forEach((s) => (s.style.display = "none"));
+        document.querySelectorAll(".section").forEach((s) => (s.style.display = "none"));
         document.getElementById(id).style.display = "block";
       }
 
@@ -233,8 +161,7 @@
         const audio = document.getElementById("bgmusic");
         audio.play();
       }
-    </script>
-    <script>
+
       function playMusic2() {
         const audio2 = document.getElementById("bgmusic2");
         audio2.play();
@@ -242,3 +169,4 @@
     </script>
   </body>
 </html>
+
